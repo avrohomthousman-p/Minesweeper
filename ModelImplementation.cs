@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-[assembly: InternalsVisibleTo("MinesweeperModel.Test")]//ususally I dont need this, but this time I do. Not sure why
 
 
 namespace MinesweeperModel
