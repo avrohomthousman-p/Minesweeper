@@ -1,5 +1,3 @@
-﻿using Minesweeper5;
-using MinesweeperModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
