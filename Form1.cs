@@ -1,5 +1,3 @@
-﻿using MinesweeperModel;
-using MinesweeperWinForm;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,8 +8,8 @@ namespace Minesweeper5
 {
     public partial class Form1 : Form
     {
-        private readonly System.Drawing.Image bombPic = System.Drawing.Image.FromFile("../../../bomb.jpg");
-        private readonly System.Drawing.Image flagPic = System.Drawing.Image.FromFile("../../../flag.jpg");
+        private readonly System.Drawing.Image bombPic = System.Drawing.Image.FromFile("bomb.jpg");
+        private readonly System.Drawing.Image flagPic = System.Drawing.Image.FromFile("flag.jpg");
 
         int RowCount, ColCount;
         Label[,] buttons;
