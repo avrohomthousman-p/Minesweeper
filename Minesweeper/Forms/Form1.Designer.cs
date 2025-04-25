@@ -31,100 +31,94 @@ namespace Minesweeper
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bombsRemaining = new System.Windows.Forms.Label();
-            this.flag = new System.Windows.Forms.PictureBox();
-            this.difficultySetter = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flag)).BeginInit();
-            this.SuspendLayout();
+            splitContainer1 = new SplitContainer();
+            bombsRemaining = new Label();
+            flag = new PictureBox();
+            difficultySetter = new ComboBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)flag).BeginInit();
+            SuspendLayout();
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Name = "splitContainer1";
+            splitContainer1.Orientation = Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.bombsRemaining);
-            this.splitContainer1.Panel1.Controls.Add(this.flag);
-            this.splitContainer1.Panel1.Controls.Add(this.difficultySetter);
+            splitContainer1.Panel1.Controls.Add(bombsRemaining);
+            splitContainer1.Panel1.Controls.Add(flag);
+            splitContainer1.Panel1.Controls.Add(difficultySetter);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(680, 530);
-            this.splitContainer1.SplitterDistance = 55;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 0;
+            splitContainer1.Panel2.Controls.Add(tableLayoutPanel1);
+            splitContainer1.Size = new Size(680, 530);
+            splitContainer1.SplitterDistance = 55;
+            splitContainer1.TabIndex = 0;
             // 
             // bombsRemaining
             // 
-            this.bombsRemaining.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(215)))), ((int)(((byte)(81)))));
-            this.bombsRemaining.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bombsRemaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bombsRemaining.Location = new System.Drawing.Point(542, 0);
-            this.bombsRemaining.Name = "bombsRemaining";
-            this.bombsRemaining.Size = new System.Drawing.Size(65, 55);
-            this.bombsRemaining.TabIndex = 0;
+            bombsRemaining.BackColor = Color.FromArgb(169, 215, 81);
+            bombsRemaining.Dock = DockStyle.Right;
+            bombsRemaining.Font = new Font("Microsoft Sans Serif", 29F);
+            bombsRemaining.Location = new Point(542, 0);
+            bombsRemaining.Name = "bombsRemaining";
+            bombsRemaining.Size = new Size(65, 55);
+            bombsRemaining.TabIndex = 0;
             // 
             // flag
             // 
-            this.flag.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flag.Location = new System.Drawing.Point(607, 0);
-            this.flag.Name = "flag";
-            this.flag.Size = new System.Drawing.Size(73, 55);
-            this.flag.Image = flagPic;
-            this.flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.flag.TabIndex = 1;
-            this.flag.TabStop = false;
+            flag.Dock = DockStyle.Right;
+            flag.Location = new Point(607, 0);
+            flag.Name = "flag";
+            flag.Size = new Size(73, 55);
+            flag.SizeMode = PictureBoxSizeMode.StretchImage;
+            flag.TabIndex = 1;
+            flag.TabStop = false;
             // 
             // difficultySetter
             // 
-            this.difficultySetter.Dock = System.Windows.Forms.DockStyle.Left;
-            this.difficultySetter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.difficultySetter.FormattingEnabled = true;
-            this.difficultySetter.Items.AddRange(new object[] {
-            MinesweeperModel.DifficultyLevel.Easy,
-            MinesweeperModel.DifficultyLevel.Medium,
-            MinesweeperModel.DifficultyLevel.Hard});
-            this.difficultySetter.Location = new System.Drawing.Point(0, 0);
-            this.difficultySetter.Name = "difficultySetter";
-            this.difficultySetter.Size = new System.Drawing.Size(138, 23);
-            this.difficultySetter.TabIndex = 2;
-            this.difficultySetter.SelectedIndexChanged += DifficultySetter_SelectedValueChanged;
+            difficultySetter.Dock = DockStyle.Left;
+            difficultySetter.DropDownStyle = ComboBoxStyle.DropDownList;
+            difficultySetter.FormattingEnabled = true;
+            difficultySetter.Items.AddRange(new object[] { DifficultyLevel.Easy, DifficultyLevel.Medium, DifficultyLevel.Hard });
+            difficultySetter.Location = new Point(0, 0);
+            difficultySetter.Name = "difficultySetter";
+            difficultySetter.Size = new Size(138, 28);
+            difficultySetter.TabIndex = 2;
+            difficultySetter.SelectedIndexChanged += DifficultySetter_SelectedValueChanged;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Cursor = Cursors.Hand;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.Size = new Size(200, 100);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(680, 530);
-            this.Controls.Add(this.splitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flag)).EndInit();
-            this.ResumeLayout(false);
-
+            ClientSize = new Size(680, 530);
+            Controls.Add(splitContainer1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Name = "Form1";
+            Text = "Minesweeper";
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)flag).EndInit();
+            ResumeLayout(false);
         }
 
 
